@@ -1,17 +1,33 @@
 import { Link } from "react-router-dom";
-
+import { useState } from "react";
 const baseUrl = import.meta.env.BASE_URL;
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header>
-      <h1>
-        <img src={baseUrl + "/assets/shared/desktop/logo.svg"} alt="" />
+    <header className={`header ${isMenuOpen ? "open" : ""}`}>
+      <h1 className="logo">
+        <img src={baseUrl + "/assets/shared/desktop/logo.svg"} alt="logo" />
+        <button
+          type="button"
+          className="menu-button"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <img
+            className="menu-icon"
+            src={
+              baseUrl +
+              `/assets/shared/mobile/${isMenuOpen ? "close" : "menu"}.svg`
+            }
+            alt="menu"
+            height={20}
+            width={20}
+          />
+        </button>
       </h1>
-      <img src={baseUrl + "/assets/shared/mobile/menu.svg"} alt="" />
-      <nav>
-        <img src={baseUrl + "/assets/shared/mobile/close.svg"} alt="" />
-        <ul>
+      <nav className="nav">
+        <ul className="nav-list">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -24,8 +40,10 @@ export default function Header() {
           <li>
             <Link to="/pricing">Pricing</Link>{" "}
           </li>
-          <a href="">GET AN INVITE</a>
         </ul>
+        <a className="invite-button" href="#">
+          GET AN INVITE
+        </a>
       </nav>
     </header>
   );
