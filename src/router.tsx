@@ -6,45 +6,50 @@ import Stories from "./pages/Stories.tsx";
 import Pricing from "./pages/Pricing.tsx";
 import Features from "./pages/Features.tsx";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: (
+        <>
+          <Header />
+          <Home />
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: "/stories",
+      element: (
+        <>
+          <Header />
+          <Stories />
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: "/pricing",
+      element: (
+        <>
+          <Header />
+          <Pricing />
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: "/features",
+      element: (
+        <>
+          <Header />
+          <Features />
+          <Footer />
+        </>
+      ),
+    },
+  ],
   {
-    path: "/",
-    element: (
-      <>
-        <Header />
-        <Home />
-        <Footer />
-      </>
-    ),
+    basename: "/Photosnap-multi-page-website",
   },
-  {
-    path: "/stories",
-    element: (
-      <>
-        <Header />
-        <Stories />
-        <Footer />
-      </>
-    ),
-  },
-  {
-    path: "/pricing",
-    element: (
-      <>
-        <Header />
-        <Pricing />
-        <Footer />
-      </>
-    ),
-  },
-  {
-    path: "features",
-    element: (
-      <>
-        <Header />
-        <Features />
-        <Footer />
-      </>
-    ),
-  },
-]);
+);

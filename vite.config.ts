@@ -11,4 +11,5 @@ export default defineConfig({
     setupFiles: "./src/setupTests.ts",
     css: true,
   },
+  base: "/Photosnap-multi-page-website/", //Github Repo Url
 });
