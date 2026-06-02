@@ -26,6 +26,7 @@ export default function Header() {
           />
         </button>
       </h1>
+
       <nav className="nav">
         <ul className="nav-list">
           <li>
