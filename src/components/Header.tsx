@@ -1,10 +1,21 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const baseUrl = import.meta.env.BASE_URL;
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) setIsMenuOpen(false);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <header className={`header ${isMenuOpen ? "open" : ""}`}>
       <h1 className="logo">
@@ -42,10 +53,16 @@ export default function Header() {
             <Link to="/pricing">Pricing</Link>{" "}
           </li>
         </ul>
-        <a className="invite-button" href="#">
+        <a
+          className={`invite-button menu${isMenuOpen ? "open" : ""} `}
+          href="#"
+        >
           GET AN INVITE
         </a>
       </nav>
+      <a className="invite-button head" href="#">
+        GET AN INVITE
+      </a>
     </header>
   );
 }
