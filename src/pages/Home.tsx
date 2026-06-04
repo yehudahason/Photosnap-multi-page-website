@@ -5,11 +5,21 @@ export default function Home() {
   return (
     <main className="home">
       <section className="img-container-1">
-        <div className="grid-1">
+        <div className="grid-1 extra-height">
           <div className="text1">
-            Create and share your photo Stories Photosnap is a platform for
-            photographers and visual storytellers. We make it easy to share
-            photos, tell stories and connect with others.
+            <h2>Create and share your photo Stories.</h2>
+            <p>
+              Photosnap is a platform for photographers and visual storytellers.
+              We make it easy to share photos, tell stories and connect with
+              others.
+              <a href="">
+                get an invite
+                <img
+                  src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
+                  alt=""
+                />
+              </a>
+            </p>
           </div>
           <div className="img1">
             <img
@@ -19,26 +29,42 @@ export default function Home() {
           </div>
         </div>
         <div className="grid-1 reverse">
-          <div className="img1">
+          <div className="img2">
             <img
               src={`${baseUrl}/assets/home/desktop/beautiful-stories.jpg`}
               alt=""
             />
           </div>
           <div className="text1 ">
-            Beautiful stories every time We provide design templates to ensure
-            your stories look terrific. Easily add photos, text, embed maps and
-            media from other networks. Then share your story with everyone.View
-            the stories
+            <h3>Beautiful stories every time</h3>
+            <p>
+              We provide design templates to ensure your stories look terrific.
+              Easily add photos, text, embed maps and media from other networks.
+              Then share your story with everyone.
+            </p>
+
+            <a href="">
+              View the stories
+              <img src={`${baseUrl}/assets/shared/desktop/arrow.svg`} alt="" />
+            </a>
           </div>
         </div>
         <div className="grid-1">
           <div className="text1">
-            Designed for everyone Photosnap can help you create stories that
-            resonate with your audience. Our tool is designed for photographers
-            of all levels, brands, businesses you name it.View the stories
+            <h3>Designed for everyone</h3>
+            <p>
+              {" "}
+              Photosnap can help you create stories that resonate with your
+              audience. Our tool is designed for photographers of all levels,
+              brands, businesses you name it.
+            </p>
+
+            <a href="">
+              View the stories
+              <img src={`${baseUrl}/assets/shared/desktop/arrow.svg`} alt="" />
+            </a>
           </div>
-          <div className="img1">
+          <div className="img2">
             <img
               src={`${baseUrl}/assets/home/desktop/designed-for-everyone.jpg`}
               alt=""
@@ -51,7 +77,16 @@ export default function Home() {
           <div className="item">
             <img src={`${baseUrl}/assets/stories/desktop/mountains.jpg`} />
             <div className="text-con">
-              The Mountains by John Appleseed Read Story
+              <h4>The Mountains</h4>
+              <p>by John Appleseed</p>
+              <div className="border"></div>
+              <a href="">
+                Read Story
+                <img
+                  src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
+                  alt=""
+                />
+              </a>
             </div>
           </div>
           <div className="item">
@@ -59,35 +94,80 @@ export default function Home() {
 
             <div className="text-con">
               {" "}
-              Sunset Cityscapes by Benjamin Cruz Read Story
+              <h4>Sunset Cityscapes</h4>
+              <p>by Benjamin Cruz</p>
+              <div className="border"></div>
+              <a href="">
+                Read Story
+                <img
+                  src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
+                  alt=""
+                />
+              </a>
             </div>
           </div>
           <div className="item">
             <img src={`${baseUrl}/assets/stories/desktop/18-days-voyage.jpg`} />
             <div className="text-con">
-              18 Days Voyage by Alexei Borodin Read Story
+              <h4>18 Days Voyage</h4>
+              <p>by Alexei Borodin</p>
+              <div className="border"></div>
+
+              <a href="">
+                {" "}
+                Read Story
+                <img
+                  src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
+                  alt=""
+                />
+              </a>
             </div>
           </div>
           <div className="item">
             <img src={`${baseUrl}/assets/stories/desktop/architecturals.jpg`} />
             <div className="text-con">
-              Architecturals by Samantha Brooke Read Story
+              <h4>Architecturals</h4>
+              <p>by Samantha Brooke</p>
+              <div className="border"></div>
+
+              <a href="">
+                Read Story
+                <img
+                  src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
+                  alt=""
+                />
+              </a>
             </div>
           </div>
         </div>
       </section>
       <section className="text-container-1">
         <div className="item">
-          100% Responsive No matter which the device you’re on, our site is
-          fully responsive and stories look beautiful on any screen.
+          <img
+            src={`${baseUrl}/assets/features/desktop/responsive.svg`}
+            alt=""
+          />
+          <h5>100% Responsive</h5>
+          <p>
+            No matter which the device you’re on, our site is fully responsive
+            and stories look beautiful on any screen.
+          </p>
         </div>
         <div className="item">
-          No Photo Upload Limit Our tool has no limits on uploads or bandwidth.
-          Freely upload in bulk and share all of your stories in one go.
+          <img src={`${baseUrl}/assets/features/desktop/no-limit.svg`} alt="" />
+          <h5>No Photo Upload Limit</h5>
+          <p>
+            Our tool has no limits on uploads or bandwidth. Freely upload in
+            bulk and share all of your stories in one go.
+          </p>
         </div>
         <div className="item">
-          Available to Embed Embed Tweets, Facebook posts, Instagram media,
-          Vimeo or YouTube videos, Google Maps, and more.
+          <img src={`${baseUrl}/assets/features/desktop/embed.svg`} alt="" />
+          <h5>Available to Embed</h5>
+          <p>
+            Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube
+            videos, Google Maps, and more.
+          </p>
         </div>
       </section>
     </main>
