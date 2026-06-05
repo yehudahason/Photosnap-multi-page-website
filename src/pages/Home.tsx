@@ -6,20 +6,17 @@ export default function Home() {
     <main className="home">
       <section className="img-container-1">
         <div className="grid-1 extra-height">
-          <div className="text1">
+          <div className="text1 bg-black">
             <h2>Create and share your photo Stories.</h2>
             <p>
               Photosnap is a platform for photographers and visual storytellers.
               We make it easy to share photos, tell stories and connect with
               others.
-              <a href="">
-                get an invite
-                <img
-                  src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
-                  alt=""
-                />
-              </a>
             </p>
+            <a href="">
+              get an invite
+              <img src={`${baseUrl}/assets/shared/desktop/arrow.svg`} alt="" />
+            </a>
           </div>
           <div className="img1">
             <img
@@ -76,7 +73,7 @@ export default function Home() {
         <div className="grid-2">
           <div className="item">
             <img src={`${baseUrl}/assets/stories/desktop/mountains.jpg`} />
-            <div className="text-con">
+            <div className="text-abs">
               <h4>The Mountains</h4>
               <p>by John Appleseed</p>
               <div className="border"></div>
@@ -92,7 +89,7 @@ export default function Home() {
           <div className="item">
             <img src={`${baseUrl}/assets/stories/desktop/cityscapes.jpg`} />
 
-            <div className="text-con">
+            <div className="text-abs">
               {" "}
               <h4>Sunset Cityscapes</h4>
               <p>by Benjamin Cruz</p>
@@ -108,7 +105,7 @@ export default function Home() {
           </div>
           <div className="item">
             <img src={`${baseUrl}/assets/stories/desktop/18-days-voyage.jpg`} />
-            <div className="text-con">
+            <div className="text-abs">
               <h4>18 Days Voyage</h4>
               <p>by Alexei Borodin</p>
               <div className="border"></div>
@@ -125,7 +122,7 @@ export default function Home() {
           </div>
           <div className="item">
             <img src={`${baseUrl}/assets/stories/desktop/architecturals.jpg`} />
-            <div className="text-con">
+            <div className="text-abs">
               <h4>Architecturals</h4>
               <p>by Samantha Brooke</p>
               <div className="border"></div>
