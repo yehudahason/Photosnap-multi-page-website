@@ -1,9 +1,9 @@
 import React from "react";
+export const baseUrl = import.meta.env.BASE_URL;
 
 export default function Home() {
-  const baseUrl = import.meta.env.BASE_URL;
   return (
-    <main className="home">
+    <main>
       <section className="img-container-1">
         <div className="grid-1 extra-height">
           <div className="text1 bg-black">

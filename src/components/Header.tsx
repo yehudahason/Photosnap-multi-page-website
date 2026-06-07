@@ -19,7 +19,9 @@ export default function Header() {
   return (
     <header className={`header ${isMenuOpen ? "open" : ""}`}>
       <h1 className="logo">
-        <img src={baseUrl + "/assets/shared/desktop/logo.svg"} alt="logo" />
+        <a href="/">
+          <img src={baseUrl + "/assets/shared/desktop/logo.svg"} alt="logo" />
+        </a>
         <button
           type="button"
           className="menu-button"
@@ -40,9 +42,6 @@ export default function Header() {
 
       <nav className="nav">
         <ul className="nav-list">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
           <li>
             <Link to="/stories">Stories</Link>{" "}
           </li>
