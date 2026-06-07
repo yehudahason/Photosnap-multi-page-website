@@ -184,10 +184,13 @@ export default function Stories() {
       <section className="img-container-2">
         <div className="grid-2">
           <div className="item">
-            <img src={`${baseUrl}/assets/stories/desktop/mountains.jpg`} />
+            <img
+              src={`${baseUrl}/assets/stories/desktop/rage-of-the-sea.jpg`}
+            />
             <div className="text-abs">
-              <h4>The Mountains</h4>
-              <p>by John Appleseed</p>
+              <p>March 19th 2020</p>
+              <h4>Rage of The Sea</h4>
+              <p>by Mohammed Abdul</p>
               <div className="border"></div>
               <a href="">
                 Read Story
@@ -198,13 +201,14 @@ export default function Stories() {
               </a>
             </div>
           </div>
-          <div className="item">
-            <img src={`${baseUrl}/assets/stories/desktop/cityscapes.jpg`} />
+          <div className="item dark-bg">
+            <img src={`${baseUrl}/assets/stories/desktop/running-free.jpg`} />
 
             <div className="text-abs">
               {" "}
-              <h4>Sunset Cityscapes</h4>
-              <p>by Benjamin Cruz</p>
+              <p>March 16th 2020</p>
+              <h4>Running Free</h4>
+              <p>by Michelle</p>
               <div className="border"></div>
               <a href="">
                 Read Story
@@ -216,10 +220,13 @@ export default function Stories() {
             </div>
           </div>
           <div className="item">
-            <img src={`${baseUrl}/assets/stories/desktop/18-days-voyage.jpg`} />
+            <img
+              src={`${baseUrl}/assets/stories/desktop/behind-the-waves.jpg`}
+            />
             <div className="text-abs">
-              <h4>18 Days Voyage</h4>
-              <p>by Alexei Borodin</p>
+              <p>March 11th 2020</p>
+              <h4> Behind the Waves</h4>
+              <p>by Lamarr Wilson</p>
               <div className="border"></div>
 
               <a href="">
@@ -233,9 +240,10 @@ export default function Stories() {
             </div>
           </div>
           <div className="item">
-            <img src={`${baseUrl}/assets/stories/desktop/architecturals.jpg`} />
+            <img src={`${baseUrl}/assets/stories/desktop/calm-waters.jpg`} />
             <div className="text-abs">
-              <h4>Architecturals</h4>
+              <p>March 9th 2020</p>
+              <h4>Calm Waters</h4>
               <p>by Samantha Brooke</p>
               <div className="border"></div>
 
@@ -253,26 +261,10 @@ export default function Stories() {
       <section className="img-container-2">
         <div className="grid-2">
           <div className="item">
-            <img src={`${baseUrl}/assets/stories/desktop/mountains.jpg`} />
+            <img src={`${baseUrl}/assets/stories/desktop/milky-way.jpg`} />
             <div className="text-abs">
-              <h4>The Mountains</h4>
-              <p>by John Appleseed</p>
-              <div className="border"></div>
-              <a href="">
-                Read Story
-                <img
-                  src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-          <div className="item">
-            <img src={`${baseUrl}/assets/stories/desktop/cityscapes.jpg`} />
-
-            <div className="text-abs">
-              {" "}
-              <h4>Sunset Cityscapes</h4>
+              <p>March 5th 2020</p>
+              <h4>The Milky Way</h4>
               <p>by Benjamin Cruz</p>
               <div className="border"></div>
               <a href="">
@@ -285,10 +277,29 @@ export default function Stories() {
             </div>
           </div>
           <div className="item">
-            <img src={`${baseUrl}/assets/stories/desktop/18-days-voyage.jpg`} />
+            <img src={`${baseUrl}/assets/stories/desktop/dark-forest.jpg`} />
+
             <div className="text-abs">
-              <h4>18 Days Voyage</h4>
-              <p>by Alexei Borodin</p>
+              {" "}
+              <p>March 4th 2020</p>
+              <h4>Night at The Dark Forest</h4>
+              <p>by Mohammed Abdul</p>
+              <div className="border"></div>
+              <a href="">
+                Read Story
+                <img
+                  src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+          <div className="item">
+            <img src={`${baseUrl}/assets/stories/desktop/somwarpet.jpg`} />
+            <div className="text-abs">
+              <p>March 1st 2020</p>
+              <h4>Somwarpet’s Beautys</h4>
+              <p>by Michelle</p>
               <div className="border"></div>
 
               <a href="">
@@ -302,10 +313,11 @@ export default function Stories() {
             </div>
           </div>
           <div className="item">
-            <img src={`${baseUrl}/assets/stories/desktop/architecturals.jpg`} />
+            <img src={`${baseUrl}/assets/stories/desktop/land-of-dreams.jpg`} />
             <div className="text-abs">
-              <h4>Architecturals</h4>
-              <p>by Samantha Brooke</p>
+              <p>February 25th 2020</p>
+              <h4>Land of Dreams</h4>
+              <p>by William Malcolm</p>
               <div className="border"></div>
 
               <a href="">
