@@ -615,6 +615,9 @@ footer {
   .grid-4 .item-img img {
     content: url("/assets/features/tablet/hero.jpg");
   }
+  .grid-4 .item-img.p img {
+    content: url("/assets/pricing/tablet/hero.jpg");
+  }
 }
 @media (max-width: 47.9375rem) {
   .img-container-1 {
@@ -725,6 +728,9 @@ footer {
   }
   .grid-4 .item-img img {
     content: url("/assets/features/mobile/hero.jpg");
+  }
+  .grid-4 .item-img.p img {
+    content: url("/assets/pricing/mobile/hero.jpg");
   }
   .grid-4 .item-img {
     height: auto;
