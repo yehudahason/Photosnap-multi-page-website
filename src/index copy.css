@@ -7,17 +7,17 @@
 }
 
 :root {
-  --tp1: 700 2.5rem/1.2 "DM Sans";
-  --tp2: 700 2rem/1.25 "DM Sans";
-  --tp3: 700 1.5rem/1.25 "DM Sans";
-  --tp4: 700 1.125rem/1.4 "DM Sans";
-  --tp5-bold: 700 0.9375rem/1.35 "DM Sans";
-  --tp5: 400 0.9375rem/1.65 "DM Sans";
-  --tp6: 400 0.8125rem/1.3 "DM Sans";
-  --tp7: 700 0.75rem/1.35 "DM Sans";
+  --tp1: 700 40px/1.2 "DM Sans";
+  --tp2: 700 32px/1.25 "DM Sans";
+  --tp3: 700 24px/1.25 "DM Sans";
+  --tp4: 700 18px/1.4 "DM Sans";
+  --tp5-bold: 700 15px/1.35 "DM Sans";
+  --tp5: 400 15px/1.65 "DM Sans";
+  --tp6: 400 13px/1.3 "DM Sans";
+  --tp7: 700 12px/1.35 "DM Sans";
 
-  --ltsp5-bold: 0.15625rem;
-  --ltsp7: 0.125rem;
+  --ltsp5-bold: 2.5px;
+  --ltsp7: 2px;
 
   /* Neutral */
   --neutral-950: #000000;
@@ -121,7 +121,7 @@ p {
   text-transform: uppercase;
   width: min(20.5rem, 80%);
   line-height: 2.5rem;
-  letter-spacing: 0.125rem;
+  letter-spacing: 2px;
 }
 .text1 p {
   text-align: left;
@@ -139,7 +139,7 @@ p {
   text-transform: uppercase;
   font: var(--tp7);
   color: var(--neutral-950);
-  letter-spacing: 0.125rem;
+  letter-spacing: 2px;
 }
 .text1.bg-black a {
   color: var(--neutral-300);
@@ -159,7 +159,7 @@ p {
 }
 
 .grid-2 .item:hover {
-  transform: translateY(-1.875rem);
+  transform: translateY(-30px);
 }
 .item.dark-bg::before {
   content: "";
@@ -173,7 +173,7 @@ p {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -3px;
   width: 100%;
   height: 5px;
   background: var(--gradient-6);
@@ -184,7 +184,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 0rem;
-  max-width: 90rem;
+  max-width: 1440px;
   margin: 0 auto;
   background-color: white;
 }
@@ -240,7 +240,7 @@ main {
   color: white;
   text-transform: uppercase;
   font: var(--tp7);
-  letter-spacing: 0.125rem;
+  letter-spacing: 2px;
 }
 .item .text-abs p {
   font: var(--tp5);
@@ -253,8 +253,8 @@ main {
   filter: brightness(0) invert(1);
 }
 .border {
-  border-bottom: 0.0625rem solid var(--neutral-301);
-  height: 0.0625rem;
+  border-bottom: 1px solid var(--neutral-301);
+  height: 1px;
   width: 100%;
   margin: 1rem 0;
 }
@@ -307,8 +307,8 @@ main {
   position: absolute;
   bottom: 50%;
   transform: translateY(50%);
-  left: 7rem;
-  width: 25.375rem;
+  left: 112px;
+  width: 406px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -357,7 +357,7 @@ p span {
   align-items: center;
   padding: 1rem 2rem;
   background-color: white;
-  max-width: 90rem;
+  max-width: 1440px;
   margin: 0 auto;
 }
 .header h1 {
@@ -382,17 +382,17 @@ p span {
   align-items: center;
   font: var(--tp4);
   text-transform: uppercase;
-  letter-spacing: 0.0625rem;
+  letter-spacing: 1px;
 }
 .invite-button {
   padding: 0.8rem 1.5rem;
   background-color: black;
   color: white;
   border: none;
-  border-radius: 0.125rem;
+  border-radius: 2px;
   font: var(--tp4);
   text-transform: uppercase;
-  letter-spacing: 0.0625rem;
+  letter-spacing: 1px;
 }
 .invite-button.menu {
   display: none;
@@ -419,7 +419,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  max-width: 90rem;
+  max-width: 1440px;
   margin: 0 auto;
 }
 .footer-con {
@@ -488,7 +488,7 @@ footer {
   object-fit: cover;
 }
 
-@media (max-width: 90rem) {
+@media (max-width: 1440px) {
   .img-container-2 {
     height: 62rem;
   }
@@ -503,7 +503,7 @@ footer {
     width: 100%;
   }
 }
-@media (max-width: 64rem) {
+@media (max-width: 1024px) {
   .grid-1 {
     grid-template-columns: 5fr 3fr;
   }
@@ -524,7 +524,7 @@ footer {
       "b  h"
       "d h";
     gap: 0.5rem;
-    max-width: 43.75rem;
+    max-width: 700px;
   }
   .footer-nav-list {
     flex-direction: row;
@@ -556,7 +556,7 @@ footer {
     text-align: left;
   }
 }
-@media (max-width: 47.9375rem) {
+@media (max-width: 767px) {
   .img-container-1 {
     height: 130.5rem;
   }
@@ -637,7 +637,7 @@ footer {
     background-color: var(--neutral-950);
   }
   .img-item {
-    height: 19.8125rem;
+    height: 317px;
     justify-self: start;
   }
   .text-abs2 {
@@ -682,7 +682,7 @@ footer {
     gap: 1rem;
     visibility: hidden;
     opacity: 0;
-    transform: translateY(-1.25rem);
+    transform: translateY(-20px);
     transition:
       opacity 0.5s ease,
       transform 0.5s ease;
@@ -696,7 +696,7 @@ footer {
     width: 100%;
     flex-direction: column;
     gap: 1rem;
-    border-bottom: 0.0625rem solid black;
+    border-bottom: 1px solid black;
     padding: 1rem 0;
   }
   .invite-button {
@@ -739,7 +739,7 @@ footer {
   }
 }
 
-@media (max-width: 31.25rem) {
+@media (max-width: 500px) {
   .text-abs2 {
     gap: 1rem;
     padding: 1rem;
