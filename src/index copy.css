@@ -7,9 +7,9 @@
 }
 
 :root {
-  --tp1: 700 40px/1.2 "DM Sans";
-  --tp2: 700 32px/1.25 "DM Sans";
-  --tp3: 700 24px/1.25 "DM Sans";
+  --tp1: 700 2.5rem/1.2 "DM Sans";
+  --tp2: 700 2rem/1.25 "DM Sans";
+  --tp3: 700 1.5rem/1.25 "DM Sans";
   --tp4: 700 18px/1.4 "DM Sans";
   --tp5-bold: 700 15px/1.35 "DM Sans";
   --tp5: 400 15px/1.65 "DM Sans";
