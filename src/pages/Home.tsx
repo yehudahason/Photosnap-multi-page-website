@@ -1,4 +1,3 @@
-import React from "react";
 export const baseUrl = import.meta.env.BASE_URL;
 
 export default function Home() {

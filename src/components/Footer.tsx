@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Footer() {
   const baseUrl = import.meta.env.BASE_URL;
   return (
@@ -55,16 +53,16 @@ export default function Footer() {
         <nav>
           <ul className="footer-nav-list">
             <li>
-              <a href="#">Home</a>
+              <a href={baseUrl}>Home</a>
             </li>
             <li>
-              <a href="#">Stories</a>
+              <a href={baseUrl + "stories"}>Stories</a>
             </li>
             <li>
-              <a href="#">Features</a>
+              <a href={baseUrl + "features"}>Features</a>
             </li>
             <li>
-              <a href="#">Pricing</a>
+              <a href={baseUrl + "pricing"}>Pricing</a>
             </li>
           </ul>
         </nav>

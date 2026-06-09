@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className={`header ${isMenuOpen ? "open" : ""}`}>
       <h1 className="logo">
-        <a href="/">
+        <a href={baseUrl}>
           <img src={baseUrl + "/assets/shared/desktop/logo.svg"} alt="logo" />
         </a>
         <button

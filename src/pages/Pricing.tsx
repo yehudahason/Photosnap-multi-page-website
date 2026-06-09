@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Pricing() {
-  type Plan = "monthly" | "yearly";
+  // type Plan = "monthly" | "yearly";
   const baseUrl = import.meta.env.BASE_URL;
   const [plan, setPlan] = useState<boolean>(false);
 

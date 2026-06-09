@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Features() {
   const baseUrl = import.meta.env.BASE_URL;
   return (
