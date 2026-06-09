@@ -536,7 +536,48 @@ footer {
   height: 100%;
   object-fit: cover;
 }
+.plan-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+.plan-btn span {
+  font: var(--tp4);
+  color: var(--neutral-301);
+}
+.plan-btn span.active {
+  color: var(--neutral-9500);
+}
+.checkbox-container {
+  position: relative;
+  width: 4rem;
+  height: 1.8rem;
+  background-color: var(--neutral-300);
+  border-radius: 2rem;
+}
+.checkbox-container .checkmark {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 0.3rem;
+  border-radius: 50%;
 
+  transform: translate(0, -50%);
+  background-color: var(--neutral-950);
+  transition: all 0.3s ease;
+}
+.checkbox-container input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+.checkbox-container input:checked + .checkmark {
+  left: 2.25rem;
+}
 @media (max-width: 90rem) {
   .img-container-2 {
     height: 62rem;
