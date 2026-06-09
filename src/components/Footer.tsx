@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <footer className="footer">
       <div className="footer-con">
@@ -8,72 +11,76 @@ export default function Footer() {
           src={baseUrl + "/assets/shared/desktop/logo_white.svg"}
           alt="logo"
         />
+
         <ul className="social-links">
           <li>
-            <a href="#" aria-label="facebook">
+            <Link to="#" aria-label="facebook">
               <img
                 src={baseUrl + "/assets/shared/desktop/facebook.svg"}
                 alt="facebook"
               />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" aria-label="twitter">
+            <Link to="#" aria-label="twitter">
               <img
                 src={baseUrl + "/assets/shared/desktop/twitter.svg"}
                 alt="twitter"
               />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" aria-label="pinterest">
+            <Link to="#" aria-label="pinterest">
               <img
                 src={baseUrl + "/assets/shared/desktop/pinterest.svg"}
                 alt="pinterest"
               />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" aria-label="instagram">
+            <Link to="#" aria-label="instagram">
               <img
                 src={baseUrl + "/assets/shared/desktop/instagram.svg"}
                 alt="instagram"
               />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" aria-label="youtube">
+            <Link to="#" aria-label="youtube">
               <img
                 src={baseUrl + "/assets/shared/desktop/youtube.svg"}
                 alt="youtube"
               />
-            </a>
+            </Link>
           </li>
         </ul>
+
         <nav>
           <ul className="footer-nav-list">
             <li>
-              <a href={baseUrl}>Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href={baseUrl + "stories"}>Stories</a>
+              <Link to="/stories">Stories</Link>
             </li>
             <li>
-              <a href={baseUrl + "features"}>Features</a>
+              <Link to="/features">Features</Link>
             </li>
             <li>
-              <a href={baseUrl + "pricing"}>Pricing</a>
+              <Link to="/pricing">Pricing</Link>
             </li>
           </ul>
         </nav>
-        <a href="#" className="footer-invite-btn">
+
+        <Link to="#" className="footer-invite-btn">
           GET AN INVITE
           <img
             src={baseUrl + "/assets/shared/desktop/arrow.svg"}
             alt="arrow"
             className="arrow"
           />
-        </a>
+        </Link>
+
         <p className="copyright">Copyright 2019. All Rights Reserved</p>
       </div>
     </footer>

@@ -1,50 +1,31 @@
 import { createHashRouter } from "react-router-dom";
-import Header from "./components/Header.tsx";
-import Home from "./pages/Home.tsx";
-import Footer from "./components/Footer.tsx";
-import Stories from "./pages/Stories.tsx";
-import Pricing from "./pages/Pricing.tsx";
-import Features from "./pages/Features.tsx";
+import { Outlet } from "react-router-dom";
+import RootLayout from "./RootLayout";
+import Home from "./pages/Home";
+import Stories from "./pages/Stories";
+import Pricing from "./pages/Pricing";
+import Features from "./pages/Features";
 
 export const router = createHashRouter([
   {
-    path: "/",
-    element: (
-      <>
-        <Header />
-        <Home />
-        <Footer />
-      </>
-    ),
-  },
-  {
-    path: "/stories",
-    element: (
-      <>
-        <Header />
-        <Stories />
-        <Footer />
-      </>
-    ),
-  },
-  {
-    path: "/pricing",
-    element: (
-      <>
-        <Header />
-        <Pricing />
-        <Footer />
-      </>
-    ),
-  },
-  {
-    path: "/features",
-    element: (
-      <>
-        <Header />
-        <Features />
-        <Footer />
-      </>
-    ),
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/stories",
+        element: <Stories />,
+      },
+      {
+        path: "/pricing",
+        element: <Pricing />,
+      },
+      {
+        path: "/features",
+        element: <Features />,
+      },
+    ],
   },
 ]);
