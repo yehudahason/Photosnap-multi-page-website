@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 export default function Pricing() {
-  // type Plan = "monthly" | "yearly";
+  type subsription = "basic" | "pro" | "business";
   const baseUrl = import.meta.env.BASE_URL;
   const [plan, setPlan] = useState<boolean>(false);
+  const [choosen, setChoosen] = useState<subsription>("pro");
 
   return (
     <main>
@@ -36,6 +37,68 @@ export default function Pricing() {
             <span className="checkmark"></span>
           </div>
           <span className={`monthly ${plan ? "active" : ""}`}>Yearly</span>
+        </div>
+        <div className="subscriptions">
+          <div className={`item ${choosen === "basic" ? "active" : ""}`}>
+            <div className="devision">
+              <div className="left">
+                <h3>Basic</h3>
+                <p>
+                  Includes basic usage of our platform. Recommended for new and
+                  aspiring photographers.
+                </p>
+              </div>
+              <div className="right">
+                <span className="price">${plan ? "190" : "19"}</span>
+                <span className="per">{plan ? "Per Year" : "Per Month"} </span>
+              </div>
+            </div>
+            <button
+              onClick={() => {
+                setChoosen("basic");
+              }}
+            >
+              Pick Plan
+            </button>
+          </div>
+          <div className={`item ${choosen === "pro" ? "active" : ""}`}>
+            <div className="devision">
+              <div className="left">
+                <h3>Pro</h3>
+                <p>
+                  More advanced features available. Recommended for photography
+                  veterans and professionals.
+                </p>
+              </div>
+              <div className="right">
+                <span className="price">${plan ? "390" : "39"}</span>
+                <span className="per">{plan ? "Per Year" : "Per Month"}</span>
+              </div>
+            </div>
+            <button
+              onClick={() => {
+                setChoosen("pro");
+              }}
+            >
+              Pick Plan
+            </button>
+          </div>
+          <div className={`item ${choosen === "business" ? "active" : ""}`}>
+            <div className="devision">
+              <div className="left">
+                <h3>Business</h3>
+                <p>
+                  Additional features available such as more detailed metrics.
+                  Recommended for business owners.
+                </p>
+              </div>
+              <div className="right">
+                <span className="price">${plan ? "990" : "99"}</span>
+                <span className="per">{plan ? "Per Year" : "Per Month"}</span>
+              </div>
+            </div>
+            <button onClick={() => setChoosen("business")}>Pick Plan</button>
+          </div>
         </div>
       </section>
       <table>

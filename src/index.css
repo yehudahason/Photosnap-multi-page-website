@@ -578,6 +578,104 @@ footer {
 .checkbox-container input:checked + .checkmark {
   left: 2.25rem;
 }
+
+.subscriptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.subscriptions .item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--neutral-100);
+  width: 21rem;
+  padding: 2rem;
+  gap: 1.5rem;
+  transition: transform 0.5s ease;
+}
+.item .left h3 {
+  font: var(--tp3);
+  color: var(--neutral-950);
+  text-align: center;
+}
+.item .right .price {
+  font: var(--tp1);
+  color: var(--neutral-950);
+  text-align: center;
+  letter-spacing: 2px;
+}
+.item .right .per {
+  text-align: center;
+  font: var(--tp5);
+  color: var(--neutral-400);
+}
+.item .right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.item .left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.subscriptions .item p {
+  font: var(--tp5);
+  color: var(--neutral-400);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.subscriptions .item button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font: var(--tp7);
+  padding: 0.8rem 1.5rem;
+  background-color: var(--neutral-950);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.subscriptions .item.active {
+  transform: scale(1.05);
+  background-color: var(--neutral-950);
+}
+.subscriptions .item.active h3 {
+  color: white;
+}
+.subscriptions .item.active .price {
+  color: white;
+}
+.subscriptions .item.active p,
+.subscriptions .item.active .per {
+  color: var(--neutral-300);
+}
+.subscriptions .item.active button {
+  background-color: white;
+  color: var(--neutral-950);
+}
+.plan-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+.subscriptions .item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 100%;
+  height: 5px;
+  background: var(--gradient-6);
+}
 @media (max-width: 90rem) {
   .img-container-2 {
     height: 62rem;
@@ -659,8 +757,73 @@ footer {
   .grid-4 .item-img.p img {
     content: url("/assets/pricing/tablet/hero.jpg");
   }
+  .subscriptions {
+    flex-direction: column;
+  }
+  .subscriptions .item {
+    width: 100%;
+  }
+  .devision {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .subscriptions {
+    width: 100%;
+  }
+  .devision .left {
+    max-width: 20rem;
+  }
+  .devision .left p {
+    text-align: left;
+  }
+  .devision .left h3 {
+    text-align: left;
+  }
+  .subscriptions .item button {
+    width: 16rem;
+  }
+  .subscriptions .item.active {
+    transform: scale(1);
+  }
+  .subscriptions .item.active::before {
+    top: 0;
+    left: -5px;
+    height: 100%;
+    width: 5px;
+  }
 }
 @media (max-width: 47.9375rem) {
+  .plan-container {
+    padding: 2rem 1rem;
+  }
+  .devision {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .devision .left {
+    max-width: auto;
+  }
+  .devision .left p {
+    text-align: center;
+  }
+  .devision .left h3 {
+    text-align: center;
+  }
+  .subscriptions .item button {
+    width: 100%;
+  }
+  .subscriptions .item.active::before {
+    left: 0;
+    width: 100%;
+    height: 5px;
+    top: -5px;
+  }
   .img-container-1 {
     height: 130.5rem;
   }
