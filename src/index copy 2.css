@@ -158,7 +158,6 @@ p {
 
 .grid-2 .item:hover {
   transform: translateY(-1.875rem);
-  cursor: pointer;
 }
 .item.dark-bg::before {
   content: "";
@@ -207,7 +206,19 @@ main {
 .grid-1.reverse {
   grid-template-columns: 2fr 1.5fr;
 }
-.grid-2 {
+.bg-black {
+  position: relative;
+}
+.grid-1 .bg-black::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 33%;
+  width: 5px;
+  height: 33%;
+  background: var(--gradient-6);
+}
+.grid-1 .grid-2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   height: 100%;
@@ -296,6 +307,9 @@ main {
   margin: 0;
   width: 100%;
 }
+.img-container-3 a:hover {
+  text-decoration: underline;
+}
 .grid-3 {
   position: relative;
   height: 40rem;
@@ -367,7 +381,6 @@ p span {
   height: 30rem;
   width: 100%;
   gap: 0;
-  background-color: var(--neutral-950);
 }
 .grid-4 .item-img {
   height: 30rem;
@@ -434,6 +447,12 @@ p span {
   font: var(--tp4);
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
+}
+.nav-list a:hover {
+  color: var(--neutral-400);
+}
+.nav-list a {
+  transition: all 0.3s ease;
 }
 .invite-button {
   padding: 0.8rem 1.5rem;
@@ -503,6 +522,7 @@ footer {
 }
 .footer-nav-list a {
   color: white;
+  transition: all 0.3s ease;
 }
 .footer-nav-list a:hover {
   color: var(--neutral-301);
@@ -742,31 +762,6 @@ tr td {
   text-align: center;
   width: 100%;
 }
-.grid-1 .bg-black {
-  position: relative;
-}
-.grid-1 .bg-black::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 33%;
-  width: 5px;
-  height: 33%;
-  background: var(--gradient-6);
-}
-
-.grid-4 {
-  position: relative;
-}
-.grid-4 .item::before {
-  content: "";
-  position: absolute;
-  top: 33%;
-  left: 0;
-  width: 5px;
-  height: 33%;
-  background: var(--gradient-6);
-}
 
 @media (max-width: 90rem) {
   .img-container-2 {
@@ -833,6 +828,7 @@ tr td {
   .invite-button {
     padding: 0.6rem 0.7rem;
   }
+
   .nav-list {
     gap: 0.5rem;
   }
@@ -1009,7 +1005,14 @@ tr td {
     width: 100%;
     object-fit: cover;
   }
-
+  .grid-1 .bg-black::before {
+    left: 8%;
+    top: 0%;
+    width: 40%;
+    width: 40%;
+    height: 33%;
+    background: var(--gradient-6);
+  }
   .img-container-2 {
     height: 124rem;
   }
@@ -1029,14 +1032,6 @@ tr td {
       "img"
       "text";
   }
-  .grid-1 .bg-black::before {
-    left: 8%;
-    top: 0%;
-    width: 40%;
-
-    height: 5px;
-    background: var(--gradient-6);
-  }
   .text-container-1 {
     grid-area: text;
   }
@@ -1050,6 +1045,7 @@ tr td {
     grid-area: img;
   }
   .grid-3 {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 3fr;
@@ -1107,20 +1103,6 @@ tr td {
   .grid-4 .item-img {
     height: auto;
     width: 100%;
-    grid-row: 1;
-  }
-  .grid-4 .item {
-    grid-row: 2;
-    position: relative;
-  }
-  .grid-4 .item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 30%;
-    height: 5px;
-    background: var(--gradient-6);
   }
   .header {
     display: flex;
