@@ -28,7 +28,7 @@ export default function Pricing() {
       <section className="plan-container">
         <div className="plan-btn">
           <span className={`monthly ${plan ? "" : "active"}`}>Monthly</span>
-          <div className="checkbox-container">
+          <div className={`checkbox-container ${plan ? "active" : ""}`}>
             <input
               type="checkbox"
               checked={plan}
@@ -105,7 +105,7 @@ export default function Pricing() {
         <h3>Compare</h3>
 
         <table>
-          <tr>
+          <tr className="head">
             <th>The Features</th>
             <th>Basic</th>
             <th>Pro</th>
