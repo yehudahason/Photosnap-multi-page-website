@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 export default function Pricing() {
-  type subsription = "basic" | "pro" | "business";
+  type Subscription = "basic" | "pro" | "business";
   const baseUrl = import.meta.env.BASE_URL;
   const [plan, setPlan] = useState<boolean>(false);
-  const [choosen, setChoosen] = useState<subsription>("pro");
+  const [choosen, setChoosen] = useState<Subscription>("pro");
 
   return (
     <main>
@@ -30,16 +30,35 @@ export default function Pricing() {
       </section>
       <section className="plan-container">
         <div className="plan-btn">
-          <span className={`monthly ${plan ? "" : "active"}`}>Monthly</span>
+          <span
+            className={`monthly ${!plan ? "active" : ""}`}
+            aria-hidden="true"
+          >
+            Monthly
+          </span>
+
           <div className={`checkbox-container ${plan ? "active" : ""}`}>
+            {/* The input is the only focusable element here */}
             <input
+              id="plan"
               type="checkbox"
               checked={plan}
+              role="switch"
+              aria-checked={plan}
+              // This label tells the user what the switch does
+              aria-label="Billing period"
               onChange={() => setPlan((prev) => !prev)}
             />
-            <span className="checkmark"></span>
+            {/* Visual indicator only */}
+            <span className="checkmark" aria-hidden="true"></span>
           </div>
-          <span className={`monthly ${plan ? "active" : ""}`}>Yearly</span>
+
+          <span
+            className={`monthly ${plan ? "active" : ""}`}
+            aria-hidden="true"
+          >
+            Yearly
+          </span>
         </div>
         <div className="subscriptions">
           <div className={`item ${choosen === "basic" ? "active" : ""}`}>
@@ -112,101 +131,142 @@ export default function Pricing() {
         <h3>Compare</h3>
 
         <table>
-          <tr className="head">
-            <th>The Features</th>
-            <th>Basic</th>
-            <th>Pro</th>
-            <th>Business</th>
-          </tr>
-          <tr>
-            <td>Unlimited Story Posting</td>
-            <td>
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-            <td>
-              {" "}
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-            <td>
-              {" "}
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-          </tr>
-          <tr>
-            <td>Unlimited Photo Upload</td>
-            <td>
-              {" "}
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-            <td>
-              {" "}
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-            <td>
-              {" "}
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-          </tr>
-          <tr>
-            <td>Embedding Custom Content</td>
-            <td></td>
-            <td>
-              {" "}
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-            <td>
-              {" "}
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-          </tr>
-          <tr>
-            <td>Customize Metadata</td>
-            <td></td>
-            <td>
-              {" "}
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-            <td>
-              {" "}
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-          </tr>
-          <tr>
-            <td>Advanced Metrics</td>
-            <td></td>
-            <td></td>
-            <td>
-              {" "}
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-          </tr>
-          <tr>
-            <td>Photo Downloads</td>
-            <td></td>
-            <td></td>
-            <td>
-              {" "}
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-          </tr>
-          <tr>
-            <td>SEARCH ENGINE INDEXING</td>
-            <td></td>
-            <td></td>
-            <td>
-              {" "}
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-          </tr>
-          <tr>
-            <td>Custom Analytics</td>
-            <td></td>
-            <td></td>
-            <td>
-              {" "}
-              <img src={`${baseUrl}/assets/pricing/desktop/check.svg`} alt="" />
-            </td>
-          </tr>
+          <thead>
+            <tr className="head">
+              <th scope="col">The Features</th>
+              <th scope="col">Basic</th>
+              <th scope="col">Pro</th>
+              <th scope="col">Business</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="row">Unlimited Story Posting</th>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Unlimited Photo Upload</th>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Embedding Custom Content</th>
+              <td></td>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Customize Metadata</th>
+              <td></td>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Advanced Metrics</th>
+              <td></td>
+              <td></td>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Photo Downloads</th>
+              <td></td>
+              <td></td>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">SEARCH ENGINE INDEXING</th>
+              <td></td>
+              <td></td>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Custom Analytics</th>
+              <td></td>
+              <td></td>
+              <td>
+                <img
+                  src={`${baseUrl}/assets/pricing/desktop/check.svg`}
+                  alt="checkmark"
+                />
+              </td>
+            </tr>
+          </tbody>
         </table>
       </section>
     </main>

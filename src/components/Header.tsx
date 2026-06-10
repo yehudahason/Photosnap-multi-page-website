@@ -22,6 +22,7 @@ export default function Header() {
         <a href={baseUrl}>
           <img src={baseUrl + "/assets/shared/desktop/logo.svg"} alt="logo" />
         </a>
+        <div className="sr-only">Home</div>
         <button
           type="button"
           className="menu-button"
@@ -40,7 +41,7 @@ export default function Header() {
         </button>
       </h1>
 
-      <nav className="nav">
+      <nav className="nav" aria-label="Menu">
         <ul className="nav-list">
           <li>
             <Link to="/stories">Stories</Link>{" "}

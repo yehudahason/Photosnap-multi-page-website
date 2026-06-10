@@ -12,7 +12,7 @@ export default function Footer() {
           alt="logo"
         />
 
-        <ul className="social-links">
+        <ul className="social-links" aria-label="social links">
           <li>
             <Link to="#" aria-label="facebook">
               <img
@@ -56,7 +56,7 @@ export default function Footer() {
         </ul>
 
         <nav>
-          <ul className="footer-nav-list">
+          <ul className="footer-nav-list" aria-label="footer navigation">
             <li>
               <Link to="/">Home</Link>
             </li>

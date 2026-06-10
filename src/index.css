@@ -596,13 +596,19 @@ footer {
   position: absolute;
   inset: 0;
   opacity: 0;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   z-index: 10;
 }
 .checkbox-container input:checked + .checkmark {
   left: 2.25rem;
 }
-
+/* Ensure the input is focusable and add a ring to the custom checkmark */
+.checkbox-container input:focus + .checkmark {
+  outline: 1px solid red; /* Or your preferred focus indicator */
+  outline-offset: 1px;
+}
 .subscriptions {
   display: flex;
   justify-content: center;
@@ -726,6 +732,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
 }
+
 tr.head {
   border-bottom: 2px solid var(--neutral-950);
   padding: 0.75rem 0;
@@ -774,6 +781,18 @@ tr td {
   width: 5px;
   height: 33%;
   background: var(--gradient-6);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 @media (max-width: 90rem) {
@@ -948,6 +967,10 @@ tr td {
     content: "Pro";
     color: var(--neutral-400);
     letter-spacing: 1.5px;
+  }
+  th {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
   .table td:nth-child(4)::before {
     content: "Buisness";
@@ -1215,10 +1238,17 @@ tr td {
     gap: 0.5rem;
   }
 }
-
+@media (max-width: 37rem) {
+  .table td:not(:first-child) {
+    transform: translateX(-5%);
+  }
+}
 @media (max-width: 31.25rem) {
   .text-abs2 {
     gap: 1rem;
     padding: 1rem;
+  }
+  .table td:not(:first-child) {
+    transform: translateX(0);
   }
 }
