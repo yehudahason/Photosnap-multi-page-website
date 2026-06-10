@@ -57,6 +57,7 @@
 
 body {
   background-color: var(--neutral-300);
+  font-family: "DM Sans";
 }
 ul {
   list-style: none;

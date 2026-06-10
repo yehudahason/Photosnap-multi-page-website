@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer2 from "./Footer2";
 
 export default function Footer() {
   const baseUrl = import.meta.env.BASE_URL;
@@ -83,6 +84,7 @@ export default function Footer() {
 
         <p className="copyright">Copyright 2019. All Rights Reserved</p>
       </div>
+      <Footer2 />
     </footer>
   );
 }
