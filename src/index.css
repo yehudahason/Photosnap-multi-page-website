@@ -436,7 +436,7 @@ p span {
   letter-spacing: 0.0625rem;
 }
 .nav-list a {
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 .nav-list a:hover {
   color: var(--neutral-400);
