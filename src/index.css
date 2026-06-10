@@ -435,6 +435,13 @@ p span {
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
 }
+.nav-list a {
+  transition: all 0.3s ease;
+}
+.nav-list a:hover {
+  color: var(--neutral-400);
+}
+
 .invite-button {
   padding: 0.8rem 1.5rem;
   background-color: black;
@@ -503,6 +510,7 @@ footer {
 }
 .footer-nav-list a {
   color: white;
+  transition: all 0.3s ease;
 }
 .footer-nav-list a:hover {
   color: var(--neutral-301);
@@ -680,8 +688,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  padding: 3rem;
+  gap: 3rem;
+  padding: 4rem;
 }
 .subscriptions .item.active::before {
   content: "";
@@ -912,6 +920,7 @@ tr td {
     justify-content: flex-start;
     gap: 1rem;
     height: 100%;
+    transform: translate(-10%);
   }
   .table td img {
     height: 1rem;
