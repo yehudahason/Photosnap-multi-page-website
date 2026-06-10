@@ -21,7 +21,10 @@ export default function Pricing() {
             </div>
           </div>
           <div className="item-img p">
-            <img src={`${baseUrl}/assets/pricing/desktop/hero.jpg`} alt="" />
+            <img
+              src={`${baseUrl}/assets/pricing/desktop/hero.jpg`}
+              alt="hero"
+            />
           </div>
         </div>
       </section>
@@ -54,6 +57,7 @@ export default function Pricing() {
               </div>
             </div>
             <button
+              type="button"
               onClick={() => {
                 setChoosen("basic");
               }}
@@ -76,6 +80,7 @@ export default function Pricing() {
               </div>
             </div>
             <button
+              type="button"
               onClick={() => {
                 setChoosen("pro");
               }}
@@ -97,7 +102,9 @@ export default function Pricing() {
                 <span className="per">{plan ? "Per Year" : "Per Month"}</span>
               </div>
             </div>
-            <button onClick={() => setChoosen("business")}>Pick Plan</button>
+            <button type="button" onClick={() => setChoosen("business")}>
+              Pick Plan
+            </button>
           </div>
         </div>
       </section>

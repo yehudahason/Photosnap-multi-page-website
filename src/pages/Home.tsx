@@ -14,13 +14,16 @@ export default function Home() {
             </p>
             <a href="">
               get an invite
-              <img src={`${baseUrl}/assets/shared/desktop/arrow.svg`} alt="" />
+              <img
+                src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
+                alt="get an invite"
+              />
             </a>
           </div>
           <div className="img1">
             <img
               src={`${baseUrl}/assets/home/desktop/create-and-share.jpg`}
-              alt=""
+              alt="create and share"
             />
           </div>
         </div>
@@ -28,7 +31,7 @@ export default function Home() {
           <div className="img2">
             <img
               src={`${baseUrl}/assets/home/desktop/beautiful-stories.jpg`}
-              alt=""
+              alt="beautiful stories"
             />
           </div>
           <div className="text1 ">
@@ -41,7 +44,10 @@ export default function Home() {
 
             <a href="">
               View the stories
-              <img src={`${baseUrl}/assets/shared/desktop/arrow.svg`} alt="" />
+              <img
+                src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
+                alt="view the stories"
+              />
             </a>
           </div>
         </div>
@@ -57,13 +63,16 @@ export default function Home() {
 
             <a href="">
               View the stories
-              <img src={`${baseUrl}/assets/shared/desktop/arrow.svg`} alt="" />
+              <img
+                src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
+                alt="view the stories"
+              />
             </a>
           </div>
           <div className="img2">
             <img
               src={`${baseUrl}/assets/home/desktop/designed-for-everyone.jpg`}
-              alt=""
+              alt="designed for everyone"
             />
           </div>
         </div>
@@ -71,7 +80,10 @@ export default function Home() {
       <section className="img-container-2">
         <div className="grid-2">
           <div className="item">
-            <img src={`${baseUrl}/assets/stories/desktop/mountains.jpg`} />
+            <img
+              src={`${baseUrl}/assets/stories/desktop/mountains.jpg`}
+              alt="mountains"
+            />
             <div className="text-abs">
               <h4>The Mountains</h4>
               <p>by John Appleseed</p>
@@ -80,13 +92,16 @@ export default function Home() {
                 Read Story
                 <img
                   src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
-                  alt=""
+                  alt="read story"
                 />
               </a>
             </div>
           </div>
           <div className="item">
-            <img src={`${baseUrl}/assets/stories/desktop/cityscapes.jpg`} />
+            <img
+              src={`${baseUrl}/assets/stories/desktop/cityscapes.jpg`}
+              alt="cityscapes"
+            />
 
             <div className="text-abs">
               {" "}
@@ -97,13 +112,16 @@ export default function Home() {
                 Read Story
                 <img
                   src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
-                  alt=""
+                  alt="read story"
                 />
               </a>
             </div>
           </div>
           <div className="item">
-            <img src={`${baseUrl}/assets/stories/desktop/18-days-voyage.jpg`} />
+            <img
+              src={`${baseUrl}/assets/stories/desktop/18-days-voyage.jpg`}
+              alt="18 days voyage"
+            />
             <div className="text-abs">
               <h4>18 Days Voyage</h4>
               <p>by Alexei Borodin</p>
@@ -114,13 +132,16 @@ export default function Home() {
                 Read Story
                 <img
                   src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
-                  alt=""
+                  alt="read story"
                 />
               </a>
             </div>
           </div>
           <div className="item">
-            <img src={`${baseUrl}/assets/stories/desktop/architecturals.jpg`} />
+            <img
+              src={`${baseUrl}/assets/stories/desktop/architecturals.jpg`}
+              alt="architecturals"
+            />
             <div className="text-abs">
               <h4>Architecturals</h4>
               <p>by Samantha Brooke</p>
@@ -130,7 +151,7 @@ export default function Home() {
                 Read Story
                 <img
                   src={`${baseUrl}/assets/shared/desktop/arrow.svg`}
-                  alt=""
+                  alt="read story"
                 />
               </a>
             </div>
@@ -141,7 +162,7 @@ export default function Home() {
         <div className="item">
           <img
             src={`${baseUrl}/assets/features/desktop/responsive.svg`}
-            alt=""
+            alt="responsive"
           />
           <h5>100% Responsive</h5>
           <p>
@@ -150,7 +171,10 @@ export default function Home() {
           </p>
         </div>
         <div className="item">
-          <img src={`${baseUrl}/assets/features/desktop/no-limit.svg`} alt="" />
+          <img
+            src={`${baseUrl}/assets/features/desktop/no-limit.svg`}
+            alt="no limit"
+          />
           <h5>No Photo Upload Limit</h5>
           <p>
             Our tool has no limits on uploads or bandwidth. Freely upload in
@@ -158,7 +182,10 @@ export default function Home() {
           </p>
         </div>
         <div className="item">
-          <img src={`${baseUrl}/assets/features/desktop/embed.svg`} alt="" />
+          <img
+            src={`${baseUrl}/assets/features/desktop/embed.svg`}
+            alt="embed"
+          />
           <h5>Available to Embed</h5>
           <p>
             Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube

@@ -15,7 +15,10 @@ export default function Features() {
             </div>
           </div>
           <div className="item-img">
-            <img src={`${baseUrl}/assets/features/desktop/hero.jpg`} alt="" />
+            <img
+              src={`${baseUrl}/assets/features/desktop/hero.jpg`}
+              alt="hero"
+            />
           </div>
         </div>
       </section>
@@ -23,7 +26,7 @@ export default function Features() {
         <div className="item">
           <img
             src={`${baseUrl}/assets/features/desktop/responsive.svg`}
-            alt=""
+            alt="responsive"
           />
           <h5>100% Responsive</h5>
           <p>
@@ -32,7 +35,10 @@ export default function Features() {
           </p>
         </div>
         <div className="item">
-          <img src={`${baseUrl}/assets/features/desktop/no-limit.svg`} alt="" />
+          <img
+            src={`${baseUrl}/assets/features/desktop/no-limit.svg`}
+            alt="no limit"
+          />
           <h5>No Photo Upload Limit</h5>
           <p>
             Our tool has no limits on uploads or bandwidth. Freely upload in
@@ -40,7 +46,10 @@ export default function Features() {
           </p>
         </div>
         <div className="item">
-          <img src={`${baseUrl}/assets/features/desktop/embed.svg`} alt="" />
+          <img
+            src={`${baseUrl}/assets/features/desktop/embed.svg`}
+            alt="embed"
+          />
           <h5>Available to Embed</h5>
           <p>
             Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube
@@ -50,7 +59,7 @@ export default function Features() {
         <div className="item">
           <img
             src={`${baseUrl}/assets/features/desktop/custom-domain.svg`}
-            alt=""
+            alt="custom domain"
           />
           <h5>Custom Domain</h5>
           <p>
@@ -61,7 +70,7 @@ export default function Features() {
         <div className="item">
           <img
             src={`${baseUrl}/assets/features/desktop/boost-exposure.svg`}
-            alt=""
+            alt="boost exposure"
           />
           <h5> Boost Your Exposure</h5>
           <p>
@@ -72,7 +81,7 @@ export default function Features() {
         <div className="item">
           <img
             src={`${baseUrl}/assets/features/desktop/drag-drop.svg`}
-            alt=""
+            alt="drag and drop"
           />
           <h5>Drag & Drop Image</h5>
           <p>
